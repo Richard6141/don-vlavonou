@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Process donation
     async function processDonation(data) {
         try {
-            const response = await fetch('/don-vlavonou/backend/process_donation.php', {
+            const response = await fetch('../backend/process_donation.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -216,7 +216,10 @@ document.addEventListener('DOMContentLoaded', function() {
             sandbox: window.PAYMENT_CONFIG.kkiapay_sandbox,
             data: transactionId,
             theme: '#16a34a',
-            position: 'center'
+            position: 'center',
+            name: data.first_name + ' ' + data.last_name,
+            email: data.email,
+            phone: data.phone
         });
 
         // Stop loading state since widget handles its own UI
@@ -240,7 +243,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Handle successful payment
     async function handlePaymentSuccess(transactionId, paymentReference = null) {
         try {
-            const response = await fetch('/don-vlavonou/backend/confirm_payment.php', {
+            const response = await fetch('../backend/confirm_payment.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -281,7 +284,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Fetch CSRF token
     async function fetchCSRFToken() {
         try {
-            const response = await fetch('/don-vlavonou/backend/get_csrf_token.php');
+            const response = await fetch('../backend/get_csrf_token.php');
             const data = await response.json();
             
             if (data.token) {

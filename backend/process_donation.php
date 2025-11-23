@@ -168,7 +168,7 @@ try {
             "description" => "Don pour Vlavonou - {$firstName} {$lastName}",
             "amount" => (int)$amount,
             "currency" => ["iso" => "XOF"],
-            "callback_url" => SITE_URL . "/public/index.php?payment=complete&ref=" . $transactionId,
+            "callback_url" => SITE_URL . "/?payment=complete&ref=" . $transactionId,
             "customer" => [
                 "firstname" => $firstName,
                 "lastname" => $lastName,

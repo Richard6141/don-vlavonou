@@ -3,14 +3,15 @@
 # Enable RewriteEngine
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    
-    # Force HTTPS (disabled for local development)
+
+    # Force HTTPS (enable in production)
     # RewriteCond %{HTTPS} off
     # RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-    # Redirect to public folder (disabled for local development)
-    # RewriteCond %{REQUEST_URI} !^/public
-    # RewriteRule ^(.*)$ /public/$1 [L]
+    # Redirect to public folder - exclude assets, backend, config, vendor
+    RewriteCond %{REQUEST_URI} !^/(assets|backend|config|vendor)/
+    RewriteCond %{REQUEST_URI} !^/public/
+    RewriteRule ^(.*)$ public/$1 [L]
 </IfModule>
 
 # Security Headers

@@ -155,16 +155,16 @@ try {
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
                         <button type="button"
                             class="amount-btn py-2 px-3 border-2 border-green-600 rounded-lg hover:bg-green-600 hover:text-white transition font-semibold text-sm"
+                            data-amount="500">500 FCFA</button>
+                        <button type="button"
+                            class="amount-btn py-2 px-3 border-2 border-green-600 rounded-lg hover:bg-green-600 hover:text-white transition font-semibold text-sm"
+                            data-amount="1000">1 000 FCFA</button>
+                        <button type="button"
+                            class="amount-btn py-2 px-3 border-2 border-green-600 rounded-lg hover:bg-green-600 hover:text-white transition font-semibold text-sm"
+                            data-amount="2000">2 000 FCFA</button>
+                        <button type="button"
+                            class="amount-btn py-2 px-3 border-2 border-green-600 rounded-lg hover:bg-green-600 hover:text-white transition font-semibold text-sm"
                             data-amount="5000">5 000 FCFA</button>
-                        <button type="button"
-                            class="amount-btn py-2 px-3 border-2 border-green-600 rounded-lg hover:bg-green-600 hover:text-white transition font-semibold text-sm"
-                            data-amount="10000">10 000 FCFA</button>
-                        <button type="button"
-                            class="amount-btn py-2 px-3 border-2 border-green-600 rounded-lg hover:bg-green-600 hover:text-white transition font-semibold text-sm"
-                            data-amount="25000">25 000 FCFA</button>
-                        <button type="button"
-                            class="amount-btn py-2 px-3 border-2 border-green-600 rounded-lg hover:bg-green-600 hover:text-white transition font-semibold text-sm"
-                            data-amount="50000">50 000 FCFA</button>
                     </div>
                 </div>
 
@@ -218,16 +218,18 @@ try {
                 <!-- Choix du mode de paiement -->
                 <div>
                     <label class="block text-gray-700 font-semibold mb-2">Mode de paiement</label>
-                    <div class="grid grid-cols-2 gap-3">
+                    <div class="grid grid-cols-2 gap-2">
                         <button type="button" id="fedapayBtn"
-                            class="payment-method-btn flex items-center justify-center gap-2 py-3 px-4 border-2 border-gray-300 rounded-lg hover:border-green-600 hover:bg-green-50 transition">
-                            <img src="../assets/images/fedapay-logo.png" alt="FedaPay" class="h-6">
-                            <span class="font-semibold text-sm">FedaPay</span>
+                            class="payment-method-btn flex items-center justify-center gap-1 py-2 px-2 border-2 border-gray-300 rounded-lg hover:border-green-600 hover:bg-green-50 transition overflow-hidden">
+                            <img src="../assets/images/fedapay-logo.png" alt="FedaPay"
+                                class="h-5 max-w-[60px] object-contain">
+                            <span class="font-semibold text-xs">FedaPay</span>
                         </button>
                         <button type="button" id="kkiapayBtn"
-                            class="payment-method-btn flex items-center justify-center gap-2 py-3 px-4 border-2 border-gray-300 rounded-lg hover:border-green-600 hover:bg-green-50 transition">
-                            <img src="../assets/images/kkiapay-logo.png" alt="KkiaPay" class="h-6">
-                            <span class="font-semibold text-sm">KkiaPay</span>
+                            class="payment-method-btn flex items-center justify-center gap-1 py-2 px-2 border-2 border-gray-300 rounded-lg hover:border-green-600 hover:bg-green-50 transition overflow-hidden">
+                            <img src="../assets/images/kkiapay-logo.png" alt="KkiaPay"
+                                class="h-5 max-w-[60px] object-contain">
+                            <span class="font-semibold text-xs">KkiaPay</span>
                         </button>
                     </div>
                     <input type="hidden" id="paymentMethod" name="payment_method" required>
