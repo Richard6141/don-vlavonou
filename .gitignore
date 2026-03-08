@@ -1,0 +1,52 @@
+# Configuration sensible (utiliser config.example.php comme base)
+config/config.php
+
+# Logs
+*.log
+logs/
+
+# Fichiers temporaires
+tmp/
+temp/
+cache/
+
+# Environnement
+.env
+.env.local
+
+# Dépendances
+vendor/
+node_modules/
+
+# Système d'exploitation
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Fichiers temporaires Microsoft Office
+~$*
+
+# IDE / éditeurs
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+*.bak
+
+# Sessions outils IA
+.claude/
+.cursor/
+
+# Uploads utilisateurs
+uploads/
+assets/images/uploaded/
+
+# Backups
+*.backup
+backup/
+
+# Build
+dist/
+build/
+coverage/

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Soutenez Vlavonou - Faites un don sécurisé">
+    <title>Don pour Vlavonou - Union Progressiste le Renouveau</title>
+    
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+</head>
+<body class="bg-gradient-to-br from-green-50 to-yellow-50 min-h-screen">
+    
+    <!-- Header -->
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex items-center justify-center">
+                <img src="../assets/images/logo.png" alt="Union Progressiste le Renouveau" class="h-20 md:h-24">
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8 md:py-12">
+        
+        <!-- Message de Vlavonou -->
+        <section class="bg-white rounded-2xl shadow-xl p-6 md:p-10 mb-8 max-w-4xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center gap-6 mb-6">
+                <img src="../assets/images/vlavonou.jpg" alt="Vlavonou" class="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-green-600 shadow-lg">
+                <div class="text-center md:text-left">
+                    <h1 class="text-3xl md:text-4xl font-bold text-green-800 mb-2">Soutenez Notre Vision</h1>
+                    <p class="text-xl text-gray-700">Avec Vlavonou pour un Renouveau</p>
+                </div>
+            </div>
+            
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Chers compatriotes, chers amis,
+                </p>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Ensemble, nous construisons un avenir meilleur pour notre nation. Votre soutien est essentiel 
+                    pour mener à bien nos projets et nos engagements envers le peuple.
+                </p>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Chaque contribution, quelle que soit sa taille, est un acte de foi en notre vision commune 
+                    d'un pays prospère, juste et solidaire.
+                </p>
+                <p class="text-gray-700 leading-relaxed font-semibold text-green-800">
+                    Merci pour votre confiance et votre générosité.
+                </p>
+            </div>
+        </section>
+
+        <!-- Formulaire de Don -->
+        <section class="bg-white rounded-2xl shadow-xl p-6 md:p-10 max-w-2xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-bold text-center text-green-800 mb-8">
+                Faites un Don Sécurisé
+            </h2>
+
+            <form id="donationForm" class="space-y-6">
+                
+                <!-- Montant prédéfini -->
+                <div>
+                    <label class="block text-gray-700 font-semibold mb-3">Choisissez un montant</label>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                        <button type="button" class="amount-btn py-3 px-4 border-2 border-green-600 rounded-lg hover:bg-green-600 hover:text-white transition font-semibold" data-amount="5000">5 000 FCFA</button>
+                        <button type="button" class="amount-btn py-3 px-4 border-2 border-green-600 rounded-lg hover:bg-green-600 hover:text-white transition font-semibold" data-amount="10000">10 000 FCFA</button>
+                        <button type="button" class="amount-btn py-3 px-4 border-2 border-green-600 rounded-lg hover:bg-green-600 hover:text-white transition font-semibold" data-amount="25000">25 000 FCFA</button>
+                        <button type="button" class="amount-btn py-3 px-4 border-2 border-green-600 rounded-lg hover:bg-green-600 hover:text-white transition font-semibold" data-amount="50000">50 000 FCFA</button>
+                    </div>
+                </div>
+
+                <!-- Montant personnalisé -->
+                <div>
+                    <label for="customAmount" class="block text-gray-700 font-semibold mb-2">Ou entrez un montant personnalisé (FCFA)</label>
+                    <input type="number" id="customAmount" name="amount" min="500" step="100" required
+                           class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-green-600 focus:outline-none text-lg"
+                           placeholder="Entrez le montant">
+                    <p class="text-sm text-gray-500 mt-1">Montant minimum : 500 FCFA</p>
+                </div>
+
+                <!-- Informations du donateur -->
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div>
+                        <label for="firstName" class="block text-gray-700 font-semibold mb-2">Prénom *</label>
+                        <input type="text" id="firstName" name="first_name" required
+                               class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-green-600 focus:outline-none"
+                               placeholder="Votre prénom">
+                    </div>
+                    <div>
+                        <label for="lastName" class="block text-gray-700 font-semibold mb-2">Nom *</label>
+                        <input type="text" id="lastName" name="last_name" required
+                               class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-green-600 focus:outline-none"
+                               placeholder="Votre nom">
+                    </div>
+                </div>
+
+                <div>
+                    <label for="email" class="block text-gray-700 font-semibold mb-2">Email *</label>
+                    <input type="email" id="email" name="email" required
+                           class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-green-600 focus:outline-none"
+                           placeholder="votre@email.com">
+                    <p class="text-sm text-gray-500 mt-1">Vous recevrez un reçu par email</p>
+                </div>
+
+                <div>
+                    <label for="phone" class="block text-gray-700 font-semibold mb-2">Téléphone *</label>
+                    <input type="tel" id="phone" name="phone" required
+                           class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-green-600 focus:outline-none"
+                           placeholder="+229 XX XX XX XX">
+                </div>
+
+                <div>
+                    <label for="message" class="block text-gray-700 font-semibold mb-2">Message (optionnel)</label>
+                    <textarea id="message" name="message" rows="3"
+                              class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-green-600 focus:outline-none"
+                              placeholder="Laissez un message de soutien..."></textarea>
+                </div>
+
+                <!-- Choix du mode de paiement -->
+                <div>
+                    <label class="block text-gray-700 font-semibold mb-3">Choisissez votre mode de paiement</label>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <button type="button" id="fedapayBtn" class="payment-method-btn flex items-center justify-center gap-3 py-4 px-6 border-2 border-gray-300 rounded-lg hover:border-green-600 hover:bg-green-50 transition">
+                            <img src="../assets/images/fedapay-logo.png" alt="FedaPay" class="h-8">
+                            <span class="font-semibold">FedaPay</span>
+                        </button>
+                        <button type="button" id="kkiapayBtn" class="payment-method-btn flex items-center justify-center gap-3 py-4 px-6 border-2 border-gray-300 rounded-lg hover:border-green-600 hover:bg-green-50 transition">
+                            <img src="../assets/images/kkiapay-logo.png" alt="KkiaPay" class="h-8">
+                            <span class="font-semibold">KkiaPay</span>
+                        </button>
+                    </div>
+                    <input type="hidden" id="paymentMethod" name="payment_method" required>
+                </div>
+
+                <!-- CSRF Token (généré dynamiquement) -->
+                <input type="hidden" name="csrf_token" id="csrfToken" value="">
+
+                <!-- Bouton de soumission -->
+                <button type="submit" id="submitBtn" 
+                        class="w-full bg-green-600 text-white py-4 px-6 rounded-lg font-bold text-lg hover:bg-green-700 transition shadow-lg hover:shadow-xl disabled:bg-gray-400 disabled:cursor-not-allowed">
+                    <span id="btnText">Procéder au paiement</span>
+                    <span id="btnLoader" class="hidden">
+                        <svg class="animate-spin h-5 w-5 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        Traitement...
+                    </span>
+                </button>
+
+                <p class="text-center text-sm text-gray-500">
+                    🔒 Paiement 100% sécurisé - Vos données sont protégées
+                </p>
+            </form>
+        </section>
+
+        <!-- Informations de confiance -->
+        <section class="max-w-4xl mx-auto mt-8 grid md:grid-cols-3 gap-6 text-center">
+            <div class="bg-white p-6 rounded-lg shadow">
+                <div class="text-green-600 text-4xl mb-2">🔒</div>
+                <h3 class="font-bold text-gray-800 mb-2">Sécurisé</h3>
+                <p class="text-sm text-gray-600">Paiement crypté et sécurisé</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow">
+                <div class="text-green-600 text-4xl mb-2">⚡</div>
+                <h3 class="font-bold text-gray-800 mb-2">Rapide</h3>
+                <p class="text-sm text-gray-600">Transaction en quelques secondes</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow">
+                <div class="text-green-600 text-4xl mb-2">📧</div>
+                <h3 class="font-bold text-gray-800 mb-2">Reçu automatique</h3>
+                <p class="text-sm text-gray-600">Confirmation par email instantanée</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-green-800 text-white py-6 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 Union Progressiste le Renouveau - Tous droits réservés</p>
+            <p class="text-sm mt-2">Contact : <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0f6c60617b6e6c7b4f7a616660617f7d60687d6a7c7c667c7b6a21607d68">[email&#160;protected]</a></p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script sr
